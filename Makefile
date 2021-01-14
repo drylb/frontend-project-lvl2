@@ -9,4 +9,6 @@ test:
 test-coverage:
 	npm test -- --coverage --coverageProvider=v8
 gendiff:
-	node bin/gendiff -h
+	node bin/gendiff
+link:
+	npm link
