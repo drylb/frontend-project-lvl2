@@ -1,2 +1,4 @@
-DS_Store
+.DS_Store
 node_modules
+__fixtures__/.DS_Store
+coverage
