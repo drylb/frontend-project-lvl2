@@ -27,7 +27,8 @@
   "dependencies": {
     "commander": "^6.2.1",
     "jest-plugins": "^2.9.0",
-    "lodash": "^4.17.20"
+    "lodash": "^4.17.20",
+    "yaml": "^1.10.0"
   },
   "devDependencies": {
     "eslint": "^7.17.0",
