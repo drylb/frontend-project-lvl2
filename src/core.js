@@ -12,7 +12,7 @@ const getFilePath = (filename) => path.join(__dirname, filename);
 // console.log(getFilePath('file1.json'));
 // console.log(__dirname);
 const getFileData = (filepath) => {
-  if (filepath.includes(__dirname) || filepath.length) {
+  if (filepath.includes(__dirname)) {
     return fs.readFileSync(filepath, 'utf-8');
   }
   return fs.readFileSync(getFilePath(filepath), 'utf-8');
@@ -22,7 +22,7 @@ const genDiff = (obj1, obj2) => {
   const keys1 = Object.keys(obj1);
   const keys2 = Object.keys(obj2);
 
-  const unitedKeys = _.union(keys1, keys2).sort();
+  const unitedKeys = _.sortBy(_.union(keys1, keys2));
 
   return unitedKeys.map((key) => {
     const initValue = _.get(obj1, key);
