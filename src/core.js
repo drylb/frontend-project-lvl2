@@ -1,10 +1,22 @@
 import fs from 'fs';
 import _ from 'lodash';
 import path from 'path';
+// import { fileURLToPath } from 'url';
 import parseData from './parsers.js';
-import format from './format.js';
+import format from './formatters/index.js';
 
-const getFileData = (filepath) => fs.readFileSync(filepath, 'utf-8');
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
+const __dirname = process.cwd();
+const getFilePath = (filename) => path.join(__dirname, filename);
+// console.log(getFilePath('file1.json'));
+// console.log(__dirname);
+const getFileData = (filepath) => {
+  if (filepath.includes(__dirname) || filepath.length) {
+    return fs.readFileSync(filepath, 'utf-8');
+  }
+  return fs.readFileSync(getFilePath(filepath), 'utf-8');
+};
 
 const genDiff = (obj1, obj2) => {
   const keys1 = Object.keys(obj1);

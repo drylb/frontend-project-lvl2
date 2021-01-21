@@ -5,6 +5,7 @@
 Setup:
 ```sh
 make install
+make link
 ```
 
 ### Hexlet tests and linter status:
@@ -16,6 +17,10 @@ make install
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/4f49d4221c38a3598e28/test_coverage)](https://codeclimate.com/github/drylb/frontend-project-lvl2/test_coverage)
 
-## Flat json compare
+## Flat JSON compare
 
 [![asciicast](https://asciinema.org/a/NeAcl91BAJjPUkD2W3SrNRFPp.svg)](https://asciinema.org/a/NeAcl91BAJjPUkD2W3SrNRFPp)
+
+## Nested JSON compare
+
+[![asciicast](https://asciinema.org/a/0kRG9RVLImqiVoEeCenmLPH4w.svg)](https://asciinema.org/a/0kRG9RVLImqiVoEeCenmLPH4w)
