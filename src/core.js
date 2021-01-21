@@ -1,16 +1,12 @@
 import fs from 'fs';
 import _ from 'lodash';
 import path from 'path';
-// import { fileURLToPath } from 'url';
 import parseData from './parsers.js';
 import format from './formatters/index.js';
 
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
 const __dirname = process.cwd();
 const getFilePath = (filename) => path.join(__dirname, filename);
-// console.log(getFilePath('file1.json'));
-// console.log(__dirname);
+
 const getFileData = (filepath) => {
   if (filepath.includes(__dirname)) {
     return fs.readFileSync(filepath, 'utf-8');
