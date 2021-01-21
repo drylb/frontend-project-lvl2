@@ -7,7 +7,7 @@ const parseData = (data, fileType) => {
   if (fileType === '.yml' || fileType === '.yaml') {
     return YAML.parse(data);
   }
-  throw new Error('Unsupported filetype');
+  throw new Error(`This ${fileType} is not supported`);
 };
 
 export default parseData;
