@@ -61,3 +61,21 @@ test('plain yml', () => {
 
   expect(gendiff(filepath1, filepath2, 'plain')).toEqual(expected);
 });
+
+test('json format', () => {
+  const filepath1 = getFixturePath('file1nested.json');
+  const filepath2 = getFixturePath('file2nested.json');
+  const resultPath = getFixturePath('outputJson');
+  const expected = read(resultPath);
+
+  expect(gendiff(filepath1, filepath2, 'json')).toEqual(expected);
+});
+
+test('json format 1', () => {
+  const filepath1 = getFixturePath('file1nested.yml');
+  const filepath2 = getFixturePath('file2nested.yml');
+  const resultPath = getFixturePath('outputJson');
+  const expected = read(resultPath);
+
+  expect(gendiff(filepath1, filepath2, 'json')).toEqual(expected);
+});
